@@ -1,22 +1,22 @@
-Englist | <a href="https://github.com/chutao-zhang/alibs-react-hooks/blob/master/README-zh_CN.md" target="_blank">中文</a>
+Englist | <a href="https://github.com/chutao-zhang/mango-libs-react-hooks/blob/master/README-zh_CN.md" target="_blank">中文</a>
 
 <p>
-<img alt="npm" src="https://img.shields.io/npm/v/@alibs/react-hooks?logo=npm&color=%234ac41c">
-<img alt="npm" src="https://img.shields.io/npm/dm/@alibs/react-hooks?logo=npm&color=%234ac41c">
-<img alt="GitHub forks" src="https://img.shields.io/github/forks/chutao-zhang/alibs-react-hooks">
-<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/chutao-zhang/alibs-react-hooks">
+<img alt="npm" src="https://img.shields.io/npm/v/@mango-libs/react-hooks?logo=npm&color=%234ac41c">
+<img alt="npm" src="https://img.shields.io/npm/dm/@mango-libs/react-hooks?logo=npm&color=%234ac41c">
+<img alt="GitHub forks" src="https://img.shields.io/github/forks/chutao-zhang/mango-libs-react-hooks">
+<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/chutao-zhang/mango-libs-react-hooks">
 </p>
 
 ### Installation
 
 ```js
-npm install @alibs/react-hooks
+npm install @mango-libs/react-hooks
 ```
 
 ### Usage
 
 ```js
-import { useXXX } from "@alibs/react-hooks";
+import { useXXX } from "@mango-libs/react-hooks";
 ```
 
 ### API
@@ -28,7 +28,7 @@ import { useXXX } from "@alibs/react-hooks";
 eg.
 
 ```js
-import { useDebounce } from "@alibs/react-hooks";
+import { useDebounce } from "@mango-libs/react-hooks";
 
 function App() {
   const { run: handleChange } = useDebounce(() => {
@@ -46,7 +46,7 @@ function App() {
 eg.
 
 ```js
-import { useThrottle } from "@alibs/react-hooks";
+import { useThrottle } from "@mango-libs/react-hooks";
 
 function App() {
   const { run: handleClick } = useThrottle(() => {
@@ -76,7 +76,7 @@ useCountdown({
 eg.
 
 ```js
-import { useCountDown } from "@alibs/react-hooks";
+import { useCountDown } from "@mango-libs/react-hooks";
 
 function App() {
   const { start, pause, reset, stop, remaining } = useCountDown({
@@ -109,7 +109,7 @@ useCookie(names: string[]): [object, SetCookieFunc, RemoveCookieFunc, ClearCooki
 eg.
 
 ```js
-import { useCookie } from "@alibs/react-hooks";
+import { useCookie } from "@mango-libs/react-hooks";
 
 function App() {
   const [cookie, setCookie, removeCookie, clearCookie] = useCookie();
@@ -131,7 +131,7 @@ function App() {
 eg.
 
 ```js
-import { useCookieValue } from "@alibs/react-hooks";
+import { useCookieValue } from "@mango-libs/react-hooks";
 
 function App() {
   const [value, setCookie, removeCookie] = useCookieValue("foo");
