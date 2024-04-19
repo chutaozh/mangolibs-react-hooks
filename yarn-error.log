@@ -1,0 +1,64 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\chuta\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js
+
+PATH: 
+  C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;D:\Tencent\微信web开发者工具\dll;;;C:\P;ogram Files\Git\cmd;C:\Program Files\Git\cmd;C:\Users\chuta\AppData\Local\Microsoft\WindowsApps;C:\Users\chuta\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\chuta\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.18.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: E:\Project\GitHub\mango-libs-react-hooks\package.json: Unexpected token ] in JSON at position 232
+      at JSON.parse (<anonymous>)
+      at C:\Users\chuta\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (C:\Users\chuta\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:310:30)
+      at C:\Users\chuta\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "@mango-libs/react-hooks",
+    "version": "1.0.0",
+    "description": "A simple react hook library.",
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "keywords": [
+      "mango-libs",
+      "react",
+      "react-hook",
+    ],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/chutao-zhang/mango-libs-react-hooks.git"
+    },
+    "scripts": {
+      "rm": "node scripts/fs.config.js rm",
+      "cp": "node scripts/fs.config.js cp",
+      "tsc": "npm run rm && tsc && npm run cp",
+      "pub": "cd @mango-libs/react-hooks && npm publish --access public"
+    },
+    "author": "ChuTao Zhang",
+    "license": "MIT",
+    "peerDependencies": {
+      "react": ">=16.8.0"
+    },
+    "dependencies": {
+      "react": ">=16.8.0"
+    },
+    "devDependencies": {
+      "@types/react": "^18.2.17",
+      "@types/node": "^20.5.6"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
