@@ -3,8 +3,8 @@ Englist | <a href="https://github.com/chutao-zhang/alibs-react-hooks/blob/master
 <p>
 <img alt="npm" src="https://img.shields.io/npm/v/@alibs/react-hooks?logo=npm&color=%234ac41c">
 <img alt="npm" src="https://img.shields.io/npm/dm/@alibs/react-hooks?logo=npm&color=%234ac41c">
-<img alt="GitHub forks" src="https://img.shields.io/github/forks/chutao-zhang/alibs-react-hooks?logo=github&color=%234ac41c">
-<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/chutao-zhang/alibs-react-hooks?logo=github&color=%234ac41c">
+<img alt="GitHub forks" src="https://img.shields.io/github/forks/chutao-zhang/alibs-react-hooks">
+<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/chutao-zhang/alibs-react-hooks">
 </p>
 
 ### Installation
