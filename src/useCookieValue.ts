@@ -21,6 +21,7 @@ interface IRemoveCookieOptions {
 
 type SetCookieFunc = (value: string, options?: ICookieOptions) => void;
 type RemoveCookieFunc = (options?: IRemoveCookieOptions) => void;
+type UseCookieValueType = [string | null, SetCookieFunc, RemoveCookieFunc];
 
 function formatOptions(options: ICookieOptions): string {
     if (!options) {
@@ -70,7 +71,7 @@ function formatOptions(options: ICookieOptions): string {
     return parts.join('; ');
 }
 
-function useCookieValue(name: string) {
+function useCookieValue(name: string): UseCookieValueType {
     const [value, setValue] = useState<string | null>(getCookie(name));
 
     function setCookie(value: string, options?: ICookieOptions): void {
@@ -88,7 +89,7 @@ function useCookieValue(name: string) {
         setCookie(name, { ...options, expires: -1 })
     }
 
-    return [value, setCookie, removeCookie] as [string, SetCookieFunc, RemoveCookieFunc];
+    return [value, setCookie, removeCookie];
 }
 
 export default useCookieValue;

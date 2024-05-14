@@ -1,7 +1,7 @@
 import { useEffect, useCallback, useRef } from "react";
 
 // 防抖 Hook 的输出值类型
-type DebounceReturn<T extends (...args: any[]) => any> = {
+type UseDebounceType<T extends (...args: any[]) => any> = {
   run: T; // 防抖后的函数
   cancel: () => void; // 取消防抖并立即执行
 };
@@ -10,7 +10,7 @@ type DebounceReturn<T extends (...args: any[]) => any> = {
 function useDebounce<T extends (...args: any[]) => any>(
   func: T,
   delay: number = 500 // 默认延迟时间为 500 毫秒
-): DebounceReturn<T> {
+): UseDebounceType<T> {
   if (typeof func !== "function") {
     throw new Error(
       'useDebounce: The first argument "func" must be a function.'

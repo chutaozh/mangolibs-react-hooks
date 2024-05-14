@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  SyntaxError: E:\Project\GitHub\mango-libs-react-hooks\package.json: Unexpected token ] in JSON at position 232
+  SyntaxError: E:\Project\GitHub\mangolibs-react-hooks\package.json: Unexpected token ] in JSON at position 232
       at JSON.parse (<anonymous>)
       at C:\Users\chuta\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:1629:59
       at Generator.next (<anonymous>)
@@ -23,25 +23,25 @@ Trace:
 
 npm manifest: 
   {
-    "name": "@mango-libs/react-hooks",
+    "name": "@mangolibs/react-hooks",
     "version": "1.0.0",
     "description": "A simple react hook library.",
     "main": "lib/index.js",
     "types": "lib/index.d.ts",
     "keywords": [
-      "mango-libs",
+      "mangolibs",
       "react",
       "react-hook",
     ],
     "repository": {
       "type": "git",
-      "url": "https://github.com/chutao-zhang/mango-libs-react-hooks.git"
+      "url": "https://github.com/chutaozh/mangolibs-react-hooks.git"
     },
     "scripts": {
       "rm": "node scripts/fs.config.js rm",
       "cp": "node scripts/fs.config.js cp",
       "tsc": "npm run rm && tsc && npm run cp",
-      "pub": "cd @mango-libs/react-hooks && npm publish --access public"
+      "pub": "cd @mangolibs/react-hooks && npm publish --access public"
     },
     "author": "ChuTao Zhang",
     "license": "MIT",

@@ -7,7 +7,7 @@ type SetStorageFunc = {
 type RemoveStorageFunc = (keys: string | string[]) => void;
 type ClearStorageFunc = () => void;
 
-type IUseSessionStorageReturn = [Record<string, any>, SetStorageFunc, RemoveStorageFunc, ClearStorageFunc];
+type UseSessionStorageType = [Record<string, any>, SetStorageFunc, RemoveStorageFunc, ClearStorageFunc];
 
 function parseValue(value: string): any {
     try {
@@ -19,9 +19,9 @@ function parseValue(value: string): any {
     }
 }
 
-function useSessionStorage(): IUseSessionStorageReturn;
-function useSessionStorage(key: string): IUseSessionStorageReturn;
-function useSessionStorage(keys: string[]): IUseSessionStorageReturn;
+function useSessionStorage(): UseSessionStorageType;
+function useSessionStorage(key: string): UseSessionStorageType;
+function useSessionStorage(keys: string[]): UseSessionStorageType;
 function useSessionStorage(args?: string | string[]) {
     const keys = Array.isArray(args) ? args : (args && [args] || undefined);
     const [values, setValues] = useState(getItems(keys));

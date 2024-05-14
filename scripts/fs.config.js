@@ -57,10 +57,10 @@ function copyFiles(sourceDir, targetDir) {
   const cmd = args[0];
 
   if (cmd === "rm") {
-    removeFiles("@mango-libs");
+    removeFiles("@mangolibs");
   }
 
   if (cmd === "cp") {
-    copyFiles("./", "@mango-libs/react-hooks");
+    copyFiles("./", "@mangolibs/react-hooks");
   }
 })();

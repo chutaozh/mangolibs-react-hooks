@@ -1,7 +1,7 @@
 import { useEffect, useCallback, useRef } from "react";
 
 // 节流 Hook 的输出值类型
-type ThrottleReturn<T extends (...args: any[]) => any> = {
+type UseThrottleType<T extends (...args: any[]) => any> = {
   run: T; // 节流后的函数
   cancel: () => void; // 取消节流并立即执行
 };
@@ -10,7 +10,7 @@ type ThrottleReturn<T extends (...args: any[]) => any> = {
 function useThrottle<T extends (...args: any[]) => any>(
   func: T,
   delay: number = 500 // 默认延迟时间为 500 毫秒
-): ThrottleReturn<T> {
+): UseThrottleType<T> {
   if (typeof func !== "function") {
     throw new Error(
       'useThrottle: The first argument "func" must be a function.'

@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 type SetStorageFunc = (value: any) => void;
 type RemoveStorageFunc = () => void;
+type UseLocalStorageValueType<T = any> = [T | null, SetStorageFunc, RemoveStorageFunc];
 
 function parseValue(value: string): any {
     try {
@@ -13,7 +14,7 @@ function parseValue(value: string): any {
     }
 }
 
-function useLocalStorageValue<T = any>(key: string) {
+function useLocalStorageValue<T = any>(key: string):UseLocalStorageValueType<T> {
     const [value, setValue] = useState<T | null>(getItem(key));
 
     function set(value: string): void {
@@ -31,7 +32,7 @@ function useLocalStorageValue<T = any>(key: string) {
         return value !== null ? parseValue(value) : value;
     }
 
-    return [value, set, remove] as [T | null, SetStorageFunc, RemoveStorageFunc];
+    return [value, set, remove];
 };
 
 export default useLocalStorageValue;
