@@ -7,7 +7,7 @@ type SetStorageFunc = {
 type RemoveStorageFunc = (keys: string | string[]) => void;
 type ClearStorageFunc = () => void;
 
-type IUseLocalStorageReturn = [Record<string, any>, SetStorageFunc, RemoveStorageFunc, ClearStorageFunc];
+type UseLocalStorageType = [Record<string, any>, SetStorageFunc, RemoveStorageFunc, ClearStorageFunc];
 
 function parseValue(value: string): any {
     try {
@@ -19,9 +19,9 @@ function parseValue(value: string): any {
     }
 }
 
-function useLocalStorage(): IUseLocalStorageReturn;
-function useLocalStorage(key: string): IUseLocalStorageReturn;
-function useLocalStorage(keys: string[]): IUseLocalStorageReturn;
+function useLocalStorage(): UseLocalStorageType;
+function useLocalStorage(key: string): UseLocalStorageType;
+function useLocalStorage(keys: string[]): UseLocalStorageType;
 function useLocalStorage(args?: string | string[]) {
     const keys = Array.isArray(args) ? args : (args && [args] || undefined);
     const [values, setValues] = useState(getItems(keys));

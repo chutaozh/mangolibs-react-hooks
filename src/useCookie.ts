@@ -33,7 +33,7 @@ type RemoveCookieFunc = {
     (args: Array<string | IRemoveCookieProps>): void;
 };
 type ClearCookieFunc = () => void;
-type UseCookieReturn = [Record<string, string>, SetCookieFunc, RemoveCookieFunc, ClearCookieFunc];
+type UseCookieType = [Record<string, string>, SetCookieFunc, RemoveCookieFunc, ClearCookieFunc];
 
 /** cookie字符串转object
  * @param cookieStr cookie字符串
@@ -103,10 +103,10 @@ function formatCookieOptions(options?: ICookieOptions): string {
     return parts.join('; ');
 }
 
-function useCookie(): UseCookieReturn;
-function useCookie(name: string): UseCookieReturn;
-function useCookie(names: string[]): UseCookieReturn;
-function useCookie(args?: string | string[]): UseCookieReturn {
+function useCookie(): UseCookieType;
+function useCookie(name: string): UseCookieType;
+function useCookie(names: string[]): UseCookieType;
+function useCookie(args?: string | string[]): UseCookieType {
     const names = Array.isArray(args) ? args : (args && [args] || undefined);
     const [values, setValues] = useState(getCookie(names));
 
